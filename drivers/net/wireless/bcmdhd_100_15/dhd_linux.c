@@ -4151,7 +4151,7 @@ dhd_event_logtrace_process(struct work_struct * work)
 #endif /* EWP_EDL */
 
 	if (ret > 0) {
-		schedule_delayed_work(&(dhd)->event_log_dispatcher_work,
+		queue_delayed_work(system_power_efficient_wq, &(dhd)->event_log_dispatcher_work,
 			msecs_to_jiffies(DHD_EVENT_LOGTRACE_RESCHEDULE_DELAY_MS));
 	}
 
@@ -4172,7 +4172,7 @@ dhd_schedule_logtrace(void *dhd_info)
 			dhd->thr_logtrace_ctl.thr_pid));
 	}
 #else
-	schedule_delayed_work(&dhd->event_log_dispatcher_work, 0);
+	queue_delayed_work(system_power_efficient_wq, &dhd->event_log_dispatcher_work, 0);
 #endif /* DHD_USE_KTHREAD_FOR_LOGTRACE */
 	return;
 }
@@ -22297,7 +22297,7 @@ dhd_eap_txcomplete(dhd_pub_t *dhdp, void *txp, bool success, int ifidx)
 						__FUNCTION__, ifidx));
 
 				OSL_ATOMIC_SET(dhdp->osh, &ifp->m4state, M4_TXFAILED);
-				schedule_delayed_work(&ifp->m4state_work,
+				queue_delayed_work(system_power_efficient_wq, &ifp->m4state_work,
 						msecs_to_jiffies(MAX_4WAY_TIMEOUT_MS));
 			}
 		}
