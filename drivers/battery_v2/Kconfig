@@ -212,15 +212,6 @@ config FUELGAUGE_MAX77854
 	 for MAXIM MAX77854 fuel gauge driver.
 	 This fuel-gauge can be used in coulomb-counting mode.
 
-config FUELGAUGE_MAX77865
-	tristate "MAX77865 fuel gauge driver"
-	default n
-	depends on BATTERY_SAMSUNG
-	help
-	 Say Y to include support
-	 for MAXIM MAX77865 fuel gauge driver.
-	 This fuel-gauge can be used in coulomb-counting mode.
-
 config FUELGAUGE_MAX77705
 	tristate "MAX77705 fuel gauge driver"
 	default n
@@ -364,12 +355,6 @@ config CHARGER_MAX77854
 	depends on BATTERY_SAMSUNG
 	help
 	  Say Y here to enable support for the MAX77854 charger
-
-config CHARGER_MAX77865
-	tristate "MAX77865 battery charger support"
-	depends on BATTERY_SAMSUNG
-	help
-	  Say Y here to enable support for the MAX77865 charger
 
 config CHARGER_MAX77705
 	tristate "MAX77705 battery charger support"

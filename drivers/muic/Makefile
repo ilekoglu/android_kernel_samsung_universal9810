@@ -28,7 +28,4 @@ obj-$(CONFIG_MUIC_UNIVERSAL)	+= universal/muic_vps.o
 obj-$(CONFIG_MUIC_UNIVERSAL_MAX77854)	+= universal/muic_task_max77854.o
 obj-$(CONFIG_MUIC_UNIVERSAL_MAX77854)	+= universal/muic_regmap_max77854.o
 obj-$(CONFIG_MUIC_HV_MAX77854)		+= universal/muic_hv_max77854.o
-obj-$(CONFIG_MUIC_UNIVERSAL_MAX77865)	+= universal/muic_task_max77865.o
-obj-$(CONFIG_MUIC_UNIVERSAL_MAX77865)	+= universal/muic_regmap_max77865.o
-obj-$(CONFIG_MUIC_HV_MAX77865)		+= universal/muic_hv_max77865.o
 obj-$(CONFIG_MUIC_SM5508)		+= sm5508-muic.o
