@@ -4998,7 +4998,7 @@
 			boost_table = < 20 858000 15 962000 5 1261000 0 >;
 			up_rate_limit_table = < 5 >;
 			down_rate_limit_table = < 5 >;
-			upscale_ratio_table = < 50 962000 65 >;
+			upscale_ratio_table = < 50 962000 65 1469000 80 >;
 		};
 	};
 
@@ -5023,7 +5023,7 @@
 		skip_lit_enabled = <0>;
 		cl_busy_ratio = <65>;
 		/* single_freq is parsed from ECT */
-		dual_freq = <2314000>;
+		dual_freq = <2496000>;
 		triple_freq = <1794000>;
 		quad_freq = <1794000>;
 		cal-id = <ACPM_DVFS_CPUCL1>;
